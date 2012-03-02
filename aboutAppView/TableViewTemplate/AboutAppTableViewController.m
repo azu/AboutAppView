@@ -203,6 +203,8 @@
     if (block){
         block(indexPath);
     }
+
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 - (void)dealloc {

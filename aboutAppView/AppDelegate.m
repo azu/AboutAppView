@@ -79,6 +79,7 @@
 
 
     self.viewController = [[[AboutAppTableViewController alloc] initWithStyle:UITableViewStyleGrouped] autorelease];
+    self.viewController.title = @"About";
     self.viewController.dataSource = sections;
     self.viewController.sectionTitles = sectionTitles;
     // Navigation Controller
