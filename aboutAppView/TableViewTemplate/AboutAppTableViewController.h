@@ -10,7 +10,6 @@
 
 static NSString *kCellTextKey = @"cellTextKey";
 static NSString *kCellDetailTextKey = @"cellDetailTextKey";
-static NSString *kSourceKey = @"sourceKey";
 static NSString *kViewKey = @"viewKey";
 static NSString *kCellAccessoryType = @"cellAccessoryType";
 
