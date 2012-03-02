@@ -64,18 +64,18 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
 
-    // 画面を更新する
+    // Update Navigation
     [self _updateNavigationItemAnimated:animated];
     [self _updateToolbarItemsAnimated:animated];
 
-    // 選択されているセルを解除する
+    // deselect cell
     NSIndexPath *indexPath;
     indexPath = [self.tableView indexPathForSelectedRow];
     if (indexPath){
         [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
     }
 
-    // セルの表示更新を行う
+    //  update visible cells
     for (UITableViewCell *cell in [self.tableView visibleCells]){
         [self _updateCell:cell atIndexPath:[self.tableView indexPathForCell:cell]];
     }
