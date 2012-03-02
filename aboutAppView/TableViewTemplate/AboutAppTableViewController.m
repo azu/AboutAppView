@@ -202,6 +202,7 @@
                                objectForKey:kDidSelectBlock];
     if (block){
         block(indexPath);
+        Block_release(block);
     }
 
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
