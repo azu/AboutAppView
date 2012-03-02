@@ -39,10 +39,10 @@
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-// セクション名
+// Section Names
     NSArray *sectionTitles = [NSArray arrayWithObjects:@"About App", @"Other", nil];
 
-// 各セクションに入れるデータを作成
+// make data for each section
     NSString *appNameString = [[[NSBundle mainBundle] infoDictionary] objectForKey:(NSString *) kCFBundleNameKey];
     NSString *versionString = [[[NSBundle mainBundle] infoDictionary] objectForKey:(NSString *) kCFBundleVersionKey];
     NSArray *section1;
@@ -77,8 +77,6 @@
                             nil];
     NSArray *sections = [NSArray arrayWithObjects:section1, section2, nil];
 
-    self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
-    // Override point for customization after application launch.
 
     self.viewController = [[[AboutAppTableViewController alloc] initWithStyle:UITableViewStyleGrouped] autorelease];
     self.viewController.dataSource = sections;
@@ -86,6 +84,8 @@
     // Navigation Controller
     self.navigationController = [[[UINavigationController alloc]
                                                           initWithRootViewController:self.viewController] autorelease];
+    // window
+    self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     self.window.rootViewController = self.navigationController;
     [self.window makeKeyAndVisible];
     return YES;

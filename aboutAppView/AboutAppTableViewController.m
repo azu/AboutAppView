@@ -133,7 +133,7 @@
         } else if ([accessoryType isKindOfClass:[NSString class]]){
             // cell accessoryMail
             if ([accessoryType isEqual:@"mail"]){
-                UIImage *mailImage = [UIImage imageNamed:@"mail.png"];
+                UIImage *mailImage = [UIImage imageNamed:@"mail_icon.png"];
                 UIImageView *mailImageView = [[UIImageView alloc] initWithImage:mailImage];
                 mailImageView.frame = CGRectMake(0, 0, 50, 50);
                 cell.accessoryView = mailImageView;
