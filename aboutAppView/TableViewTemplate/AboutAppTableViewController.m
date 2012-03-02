@@ -199,7 +199,7 @@
 
     void (^block)(NSIndexPath *);
     block = [[[self.dataSource objectAtIndex:indexPath.section] objectAtIndex:indexPath.row]
-                               objectForKey:@"block"];
+                               objectForKey:kDidSelectBlock];
     if (block){
         block(indexPath);
     }

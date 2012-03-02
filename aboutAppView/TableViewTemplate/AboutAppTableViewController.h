@@ -8,11 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+static NSString *kViewKey = @"viewKey";
 static NSString *kCellTextKey = @"cellTextKey";
 static NSString *kCellDetailTextKey = @"cellDetailTextKey";
-static NSString *kViewKey = @"viewKey";
 static NSString *kCellAccessoryType = @"cellAccessoryType";
-
+static NSString *kDidSelectBlock = @"kDidSelectBlock";
 @interface AboutAppTableViewController : UITableViewController <UITableViewDataSource, UITableViewDelegate> {
     NSArray *dataSource_;
     NSArray *sectionTitles_;

@@ -62,7 +62,7 @@
                                               @"License", kCellTextKey,
                                               Block_copy(^(NSIndexPath *indexPath) {
                                                   [self pushWebView];
-                                              }), @"block",
+                                              }), kDidSelectBlock,
                                               [NSNumber
                                                   numberWithInteger:UITableViewCellAccessoryDetailDisclosureButton],
                                               kCellAccessoryType,
@@ -71,7 +71,7 @@
                                               @"Question?", kCellTextKey,
                                               Block_copy(^{
                                                   [self showMailComposeView];
-                                              }), @"block",
+                                              }), kDidSelectBlock,
                                               @"mail", kCellAccessoryType,
                                               nil],
                             nil];
